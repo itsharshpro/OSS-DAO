@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply antialiased bg-dark-50;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-glow-blue;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-to-r from-dark-200 to-dark-300 hover:from-dark-300 hover:to-dark-400 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 border border-dark-400/50 hover:border-primary-500/50;
+  }
+
+  .btn-neon {
+    @apply relative bg-transparent border-2 border-neon-blue text-neon-blue font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:bg-neon-blue hover:text-dark-50 hover:shadow-neon inline-flex items-center justify-center whitespace-nowrap;
+  }
+
+  .btn-cyber {
+    @apply relative bg-gradient-to-r from-accent-purple/20 to-neon-blue/20 border border-accent-purple/50 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:border-neon-blue hover:shadow-cyber backdrop-blur-sm inline-flex items-center justify-center whitespace-nowrap;
+  }
+  
+  .card {
+    @apply relative bg-gradient-to-br from-dark-100/90 to-dark-200/90 border border-dark-300/30 rounded-xl p-6 backdrop-blur-sm;
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+
+  .card-cyber {
+    @apply relative bg-gradient-to-br from-dark-100/90 to-dark-200/90 border border-dark-300/30 rounded-xl p-6 backdrop-blur-sm;
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      0 0 0 1px rgba(0, 212, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .card-cyber:hover {
+    @apply border-neon-blue/50;
+    box-shadow: 
+      0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+      0 4px 6px -2px rgba(0, 0, 0, 0.05),
+      0 0 0 1px rgba(0, 212, 255, 0.3),
+      0 0 20px rgba(0, 212, 255, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .card-cyber::before {
+    content: '';
+    @apply absolute -inset-px rounded-xl opacity-0 transition-opacity duration-500;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+    z-index: -1;
+  }
+
+  .card-cyber:hover::before {
+    @apply opacity-100;
+  }
+
+  .achievement-badge {
+    @apply relative p-6 rounded-xl border border-dark-300/30 transition-all duration-500 transform hover:scale-105;
+    background: linear-gradient(135deg, rgba(20, 20, 24, 0.9) 0%, rgba(30, 30, 36, 0.9) 100%);
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+
+  .achievement-badge.earned {
+    @apply border-accent-green/40;
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      0 0 0 1px rgba(16, 185, 129, 0.3),
+      0 0 15px rgba(16, 185, 129, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .achievement-badge.not-earned {
+    @apply border-dark-400/20 opacity-60;
+  }
+
+  .achievement-badge::before {
+    content: '';
+    @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+  }
+
+  .achievement-badge.earned:hover::before {
+    @apply opacity-100;
+  }
+  
+  .gradient-border {
+    @apply relative overflow-hidden rounded-lg;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg p-[1px] bg-gradient-to-r from-primary-500 via-accent-purple to-accent-pink;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-lg bg-opacity-10 border border-opacity-20;
+  }
+
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .neon-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple;
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+  }
+
+  .cyber-border {
+    @apply relative;
+  }
+
+  .cyber-border::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-neon-blue/50 to-transparent h-[1px];
+  }
+
+  .cyber-border::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-b from-transparent via-accent-purple/50 to-transparent w-[1px];
+  }
+
+  .status-indicator {
+    @apply relative inline-flex items-center justify-center;
+  }
+
+  .status-indicator::before {
+    content: '';
+    @apply absolute inset-0 rounded-full animate-ping;
+  }
+
+  .floating-card {
+    @apply transform transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .floating-card:hover {
+    box-shadow: 
+      0 10px 15px -3px rgba(0, 0, 0, 0.15), 
+      0 4px 6px -2px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(0, 212, 255, 0.2),
+      0 0 25px rgba(0, 212, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .holographic {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .holographic::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 212, 255, 0.1) 50%,
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .holographic:hover::after {
+    left: 100%;
+  }
+}
+
+@layer utilities {
+  .text-readable {
+    @apply text-dark-700;
+  }
+  
+  .text-readable-secondary {
+    @apply text-dark-600;
+  }
+  
+  .text-readable-muted {
+    @apply text-dark-500;
+  }
+} 

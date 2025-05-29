@@ -1,0 +1,23 @@
+{
+  "network": "holesky",
+  "chainId": 17000,
+  "deployer": "0x5CCdF2B69a709e05e564D301b505BADF6c2dAdcF",
+  "timestamp": "2025-05-29T01:25:30.613Z",
+  "contracts": {
+    "OSSToken": {
+      "address": "0x37553cFe3d48E98DFAd2EB5D0C9Bc36bb4EbF83b",
+      "txHash": "0x9816a3f78b7f841fad286c31e2a58e6bf517b39a61d16e2b13e69f5c2fc3225d",
+      "blockNumber": 3912478
+    },
+    "OSSRewardsV2": {
+      "address": "0xB94d670FE21E409844426Fd5a81d70023BE247e1",
+      "txHash": "0xc083a9d6229e542c594d6e749b831189ee90c9f7131f38ffed7cd1ec5d7f8667",
+      "blockNumber": 3912480
+    },
+    "OSSDAO": {
+      "address": "0x2a74146630a414f023F76b5145254Bc2f3Ef3960",
+      "txHash": "0x913ed6cbc2aecc2fa174124cfdf6f464b1b589b8a16cc707095ff4f425b206b8",
+      "blockNumber": 3912481
+    }
+  }
+}
