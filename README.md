@@ -193,28 +193,6 @@ npm start
 
 ---
 
-## 🎯 **Roadmap**
-
-### **Phase 1: Bootstrap (Months 1-6)**
-- [x] Deploy core contracts
-- [x] Launch validator network
-- [ ] Recruit 50+ validators
-- [ ] Process 100+ contributions
-
-### **Phase 2: Growth (Months 6-18)**
-- [ ] Partner with major OSS projects
-- [ ] Launch enterprise API
-- [ ] Achieve $10K+ monthly revenue
-- [ ] Scale to 1,000+ monthly contributions
-
-### **Phase 3: Enterprise (Months 18+)**
-- [ ] B2B platform services
-- [ ] Custom validation categories
-- [ ] $100K+ monthly recurring revenue
-- [ ] 10+ enterprise clients
-
----
-
 ## 🤝 **For Different Stakeholders**
 
 ### **Contributors**
@@ -240,22 +218,6 @@ npm start
 - **Community Growth** - larger, engaged community
 - **Sustainability** - long-term contributor retention
 - **Recognition System** - reward valuable work
-
----
-
-## 📈 **Financial Projections**
-
-### **Year 1 Targets**
-- **1,000** active contributors
-- **100** active validators
-- **500** monthly contributions
-- **$50K** annual recurring revenue
-
-### **Year 3 Targets**
-- **10,000** active contributors
-- **500** active validators
-- **5,000** monthly contributions
-- **$1M** annual recurring revenue
 
 ---
 
@@ -286,34 +248,12 @@ npx hardhat verify --network holesky <CONTRACT_ADDRESS>
 
 ---
 
-## 📄 **Documentation**
-
-- **[Business Model](./BUSINESS_MODEL.md)** - Detailed economics and strategy
-- **[Setup Guide](./SETUP.md)** - Step-by-step deployment
-- **[API Documentation](./docs/API.md)** - Integration guide
-- **[Smart Contracts](./docs/CONTRACTS.md)** - Technical specifications
-
----
-
-## 🤝 **Contributing**
-
-We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
-
 ### **Development Setup**
 1. Fork the repository
 2. Create feature branch
 3. Make changes
 4. Add tests
 5. Submit pull request
-
----
-
-## 📞 **Contact & Support**
-
-- **Website**: [ossDAO.io](https://ossdao.io)
-- **Discord**: [Join Community](https://discord.gg/ossdao)
-- **Twitter**: [@OSSDAOPlatform](https://twitter.com/ossdaoplatform)
-- **Email**: hello@ossdao.io
 
 ---
 
